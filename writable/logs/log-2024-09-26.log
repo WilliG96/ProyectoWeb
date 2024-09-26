@@ -1,0 +1,329 @@
+CRITICAL - 2024-09-26 01:33:36 --> Error: Call to undefined function form_open()
+[Method: GET, Route: registro-cliente]
+in APPPATH\Views\registro_cliente.php on line 45.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 4 APPPATH\Controllers\ClienteCrud.php(11): view('registro_cliente')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 01:33:39 --> Error: Call to undefined function form_open()
+[Method: GET, Route: registro-cliente]
+in APPPATH\Views\registro_cliente.php on line 45.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 4 APPPATH\Controllers\ClienteCrud.php(11): view('registro_cliente')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 01:34:05 --> Error: Call to undefined function form_open()
+[Method: GET, Route: registro-cliente]
+in APPPATH\Views\registro_cliente.php on line 45.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 4 APPPATH\Controllers\ClienteCrud.php(11): view('registro_cliente')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 01:34:09 --> Error: Call to undefined function form_open()
+[Method: GET, Route: registro-cliente]
+in APPPATH\Views\registro_cliente.php on line 45.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 4 APPPATH\Controllers\ClienteCrud.php(11): view('registro_cliente')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 02:48:40 --> ErrorException: Undefined variable $departamentos
+[Method: GET, Route: registrar-cliente]
+in APPPATH\Views\registro_cliente.php on line 68.
+ 1 APPPATH\Views\registro_cliente.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php', 68)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(11): view('registro_cliente')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 02:49:55 --> ErrorException: Undefined variable $departamentos
+[Method: GET, Route: registrar-cliente]
+in APPPATH\Views\registro_cliente.php on line 68.
+ 1 APPPATH\Views\registro_cliente.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php', 68)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(12): view('registro_cliente')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 02:49:56 --> ErrorException: Undefined variable $departamentos
+[Method: GET, Route: registrar-cliente]
+in APPPATH\Views\registro_cliente.php on line 68.
+ 1 APPPATH\Views\registro_cliente.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php', 68)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(12): view('registro_cliente')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 02:49:59 --> ErrorException: Undefined variable $departamentos
+[Method: GET, Route: registrar-cliente]
+in APPPATH\Views\registro_cliente.php on line 68.
+ 1 APPPATH\Views\registro_cliente.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php', 68)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(12): view('registro_cliente')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 02:51:27 --> ErrorException: Undefined variable $departamentos
+[Method: GET, Route: registrar-cliente]
+in APPPATH\Views\registro_cliente.php on line 68.
+ 1 APPPATH\Views\registro_cliente.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php', 68)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(12): view('registro_cliente')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 02:51:31 --> ErrorException: Undefined variable $departamentos
+[Method: GET, Route: registrar-cliente]
+in APPPATH\Views\registro_cliente.php on line 68.
+ 1 APPPATH\Views\registro_cliente.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php', 68)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(12): view('registro_cliente')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 02:52:39 --> ErrorException: Attempt to read property "id" on array
+[Method: POST, Route: login-chek]
+in APPPATH\Controllers\TallerCrud.php on line 47.
+ 1 APPPATH\Controllers\TallerCrud.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\TallerCrud.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TallerCrud->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TallerCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 02:53:29 --> ErrorException: Attempt to read property "id" on array
+[Method: POST, Route: login-chek]
+in APPPATH\Controllers\TallerCrud.php on line 46.
+ 1 APPPATH\Controllers\TallerCrud.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\TallerCrud.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TallerCrud->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TallerCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 02:53:32 --> ErrorException: Attempt to read property "id" on array
+[Method: POST, Route: login-chek]
+in APPPATH\Controllers\TallerCrud.php on line 46.
+ 1 APPPATH\Controllers\TallerCrud.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\TallerCrud.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TallerCrud->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TallerCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 02:53:42 --> ErrorException: Attempt to read property "id" on array
+[Method: POST, Route: login-chek]
+in APPPATH\Controllers\TallerCrud.php on line 46.
+ 1 APPPATH\Controllers\TallerCrud.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\TallerCrud.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TallerCrud->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TallerCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 03:05:52 --> ErrorException: Undefined variable $departamentos
+[Method: GET, Route: registrar-cliente]
+in APPPATH\Views\registro_cliente.php on line 68.
+ 1 APPPATH\Views\registro_cliente.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php', 68)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(12): view('registro_cliente')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 03:18:37 --> ErrorException: Undefined variable $departamentos
+[Method: GET, Route: registrar-cliente]
+in APPPATH\Views\registro_cliente.php on line 68.
+ 1 APPPATH\Views\registro_cliente.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php', 68)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(12): view('registro_cliente')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 03:25:30 --> ErrorException: Undefined variable $departamentos
+[Method: GET, Route: registrar-cliente]
+in APPPATH\Views\registro_cliente.php on line 68.
+ 1 APPPATH\Views\registro_cliente.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php', 68)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(12): view('registro_cliente')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 03:25:33 --> ErrorException: Undefined variable $departamentos
+[Method: GET, Route: registrar-cliente]
+in APPPATH\Views\registro_cliente.php on line 68.
+ 1 APPPATH\Views\registro_cliente.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php', 68)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(12): view('registro_cliente')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 03:39:57 --> ErrorException: Undefined variable $departamentos
+[Method: GET, Route: registrar-cliente]
+in APPPATH\Views\registro_cliente.php on line 68.
+ 1 APPPATH\Views\registro_cliente.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php', 68)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\registro_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(13): view('registro_cliente')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->Clientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 03:51:06 --> ErrorException: Undefined variable $municipioModel
+[Method: GET, Route: registrar-cliente]
+in APPPATH\Controllers\ClienteCrud.php on line 16.
+ 1 APPPATH\Controllers\ClienteCrud.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $municipioModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\ClienteCrud.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->guardarCliente()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 03:51:08 --> ErrorException: Undefined variable $municipioModel
+[Method: GET, Route: registrar-cliente]
+in APPPATH\Controllers\ClienteCrud.php on line 16.
+ 1 APPPATH\Controllers\ClienteCrud.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $municipioModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\ClienteCrud.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->guardarCliente()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 05:13:35 --> Error: Call to undefined method CodeIgniter\HTTP\Response::with()
+[Method: POST, Route: guardar-Cliente]
+in APPPATH\Controllers\ClienteCrud.php on line 62.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->guardarCliente()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 05:18:43 --> Error: Call to undefined method CodeIgniter\HTTP\Response::with()
+[Method: POST, Route: guardar-Cliente]
+in APPPATH\Controllers\ClienteCrud.php on line 62.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->guardarCliente()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 05:28:00 --> Error: Call to undefined method CodeIgniter\HTTP\Response::with()
+[Method: POST, Route: guardar-Cliente]
+in APPPATH\Controllers\ClienteCrud.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->guardarCliente()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 05:28:23 --> Error: Call to undefined method CodeIgniter\HTTP\Response::with()
+[Method: POST, Route: guardar-Cliente]
+in APPPATH\Controllers\ClienteCrud.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->guardarCliente()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 05:28:47 --> Error: Call to undefined method CodeIgniter\HTTP\Response::with()
+[Method: POST, Route: guardar-Cliente]
+in APPPATH\Controllers\ClienteCrud.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->guardarCliente()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 05:29:29 --> Error: Call to undefined method CodeIgniter\HTTP\Response::with()
+[Method: POST, Route: guardar-Cliente]
+in APPPATH\Controllers\ClienteCrud.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->guardarCliente()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 05:30:00 --> Error: Call to undefined method CodeIgniter\HTTP\Response::with()
+[Method: POST, Route: guardar-Cliente]
+in APPPATH\Controllers\ClienteCrud.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->guardarCliente()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

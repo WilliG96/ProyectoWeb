@@ -1,0 +1,130 @@
+CRITICAL - 2024-09-13 00:06:44 --> ErrorException: Undefined property: App\Controllers\VehiculosCrud::$VehiculosModel
+[Method: GET, Route: registro-vehiculo]
+in APPPATH\Controllers\VehiculosCrud.php on line 62.
+ 1 APPPATH\Controllers\VehiculosCrud.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\VehiculosCrud::$VehiculosModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verVehiculos()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-13 00:07:00 --> ErrorException: Undefined property: App\Controllers\VehiculosCrud::$VehiculosModel
+[Method: GET, Route: registro-vehiculo]
+in APPPATH\Controllers\VehiculosCrud.php on line 62.
+ 1 APPPATH\Controllers\VehiculosCrud.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\VehiculosCrud::$VehiculosModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verVehiculos()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-13 00:07:02 --> ErrorException: Undefined property: App\Controllers\VehiculosCrud::$VehiculosModel
+[Method: GET, Route: registro-vehiculo]
+in APPPATH\Controllers\VehiculosCrud.php on line 62.
+ 1 APPPATH\Controllers\VehiculosCrud.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\VehiculosCrud::$VehiculosModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verVehiculos()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-13 00:07:02 --> ErrorException: Undefined property: App\Controllers\VehiculosCrud::$VehiculosModel
+[Method: GET, Route: registro-vehiculo]
+in APPPATH\Controllers\VehiculosCrud.php on line 62.
+ 1 APPPATH\Controllers\VehiculosCrud.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\VehiculosCrud::$VehiculosModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verVehiculos()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-13 00:18:04 --> ErrorException: Undefined property: App\Controllers\VehiculosCrud::$VehiculosModel
+[Method: GET, Route: registro-vehiculo]
+in APPPATH\Controllers\VehiculosCrud.php on line 62.
+ 1 APPPATH\Controllers\VehiculosCrud.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\VehiculosCrud::$VehiculosModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verVehiculos()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-13 00:52:33 --> ErrorException: Undefined property: App\Controllers\VehiculosCrud::$TipoVehiculosModel
+[Method: GET, Route: registro-vehiculo]
+in APPPATH\Controllers\VehiculosCrud.php on line 65.
+ 1 APPPATH\Controllers\VehiculosCrud.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\VehiculosCrud::$TipoVehiculosModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verVehiculos()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-13 00:54:21 --> ErrorException: Undefined property: App\Controllers\VehiculosCrud::$TipoVehiculosModel
+[Method: GET, Route: registro-vehiculo]
+in APPPATH\Controllers\VehiculosCrud.php on line 71.
+ 1 APPPATH\Controllers\VehiculosCrud.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\VehiculosCrud::$TipoVehiculosModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verVehiculos()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-13 00:57:14 --> ErrorException: Undefined property: App\Controllers\VehiculosCrud::$TipoVehiculosModel
+[Method: GET, Route: registro-vehiculo]
+in APPPATH\Controllers\VehiculosCrud.php on line 71.
+ 1 APPPATH\Controllers\VehiculosCrud.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\VehiculosCrud::$TipoVehiculosModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verVehiculos()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-13 00:57:16 --> ErrorException: Undefined property: App\Controllers\VehiculosCrud::$TipoVehiculosModel
+[Method: GET, Route: registro-vehiculo]
+in APPPATH\Controllers\VehiculosCrud.php on line 71.
+ 1 APPPATH\Controllers\VehiculosCrud.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\VehiculosCrud::$TipoVehiculosModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verVehiculos()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-13 00:57:16 --> ErrorException: Undefined property: App\Controllers\VehiculosCrud::$TipoVehiculosModel
+[Method: GET, Route: registro-vehiculo]
+in APPPATH\Controllers\VehiculosCrud.php on line 71.
+ 1 APPPATH\Controllers\VehiculosCrud.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\VehiculosCrud::$TipoVehiculosModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verVehiculos()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-13 00:57:17 --> ErrorException: Undefined property: App\Controllers\VehiculosCrud::$TipoVehiculosModel
+[Method: GET, Route: registro-vehiculo]
+in APPPATH\Controllers\VehiculosCrud.php on line 71.
+ 1 APPPATH\Controllers\VehiculosCrud.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\VehiculosCrud::$TipoVehiculosModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verVehiculos()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-13 01:11:09 --> ErrorException: Undefined property: App\Controllers\VehiculosCrud::$VehiculosModel
+[Method: POST, Route: guardar-Vehiculo]
+in APPPATH\Controllers\VehiculosCrud.php on line 72.
+ 1 APPPATH\Controllers\VehiculosCrud.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\VehiculosCrud::$VehiculosModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->agregarVehiculo()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-13 01:14:47 --> ErrorException: Undefined property: App\Controllers\VehiculosCrud::$VehiculosModel
+[Method: POST, Route: guardar-Vehiculo]
+in APPPATH\Controllers\VehiculosCrud.php on line 75.
+ 1 APPPATH\Controllers\VehiculosCrud.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\VehiculosCrud::$VehiculosModel', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->agregarVehiculo()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

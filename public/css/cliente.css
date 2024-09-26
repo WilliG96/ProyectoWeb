@@ -1,0 +1,53 @@
+body {
+    background-color: #f8f9fa; /* Fondo claro */
+}
+.contenedor {
+    display: flex;
+    margin: 20px; /* Margen alrededor del contenedor */
+}
+.barra-lateral {
+    background-color: #343a40; /* Color oscuro */
+    color: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 5px; /* Bordes redondeados */
+    margin-right: 20px; /* Espacio entre la barra y el contenido */
+}
+.barra-lateral h2 {
+    color: #ffffff;
+}
+.barra-lateral ul {
+    list-style-type: none;
+    padding: 0;
+}
+.barra-lateral ul li {
+    margin: 10px 0;
+}
+.barra-lateral ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.barra-lateral ul li a:hover {
+    text-decoration: underline;
+}
+.contenido-principal {
+    flex: 1;
+    padding: 20px;
+    background-image: url(../images/cliente1.jpg);
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.tabla-tickets {
+    margin-top: 20px;
+}
+.btn-crear {
+    margin-bottom: 20px;
+}
+
+.btn-success{
+    background-color: #000000; /* Color oscuro */
+    color: #ffffff;
+    font-weight: bold;
+    border: #000000;
+}
