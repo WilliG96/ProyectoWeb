@@ -27,6 +27,37 @@ public function Cliente(){
 }
 
 
+public function clientev(){
+
+return view('hola');
+}
+
+
+// Función para mostrar la lista de clientes
+public function verCliente()
+{
+    // Conectar a la base de datos
+    $db = \Config\Database::connect();
+    
+    // Crear un constructor de consultas para la tabla de clientes
+    $builder = $db->table('tbl_clientes tc');
+        
+    // Realizar los JOINs con las tablas de departamentos, municipios y usuarios
+    $builder->join('tbl_departamentos td', 'tc.Id_Departamento = td.Id_Departamento', 'inner');
+    $builder->join('tbl_municipios tm', 'tc.Id_Municipio = tm.Id_Municipio', 'inner');
+    $builder->join('tbl_usuarios tu', 'tc.Id_Usuario = tu.Id_Usuario', 'inner'); // Agregar JOIN con la tabla de usuarios
+    
+    // Obtener los resultados de clientes, incluyendo el nombre del departamento, municipio y usuario
+    $datos['clientes'] = $builder->select('tc.*, td.nombre_departamento AS nombre_departamento, tm.nombre_municipio AS nombre_municipio, tu.usuario_asignado AS nombre_usuario') // Seleccionar el nombre del usuario también
+                                 ->get()
+                                 ->getResultArray();
+        
+    // Devolver los datos para su uso en la vista
+    return view('vista_clientes', $datos);
+    }
+    
+    
+
 // Función para agregar un nuevo cliente
 public function guardarCliente()
 {
@@ -44,6 +75,7 @@ public function guardarCliente()
         'Apellido_Cliente' => $this->request->getVar('apellido_cliente'),
         'Direccion_Cliente' => $this->request->getVar('direccion_cliente'),
         'Telefono_Cliente' => $this->request->getVar('telefono_cliente'),
+        'DPI_CUI' => $this->request->getVar('dpi_cui'),
         'Id_Departamento' => $this->request->getVar('id_departamento'),
         'Id_Municipio' => $this->request->getVar('id_municipio'),
         'DPI_CUI' => $this->request->getVar('dpi_cui'),
@@ -54,72 +86,7 @@ public function guardarCliente()
     $ClienteModel->insert($data);
 
     // Redireccionar al formulario de registro de clientes
-    return $this->response->redirect(site_url('registrar-cliente'));
-}
-
-
-
-
-
-    // Función para mostrar la lista de vehículos
-public function verVehiculos()
-{
-    // Conectar a la base de datos
-    $db = \Config\Database::connect();
-
-    // Crear un constructor de consultas
-    $builder = $db->table('tbl_vehiculo tv');
-    
-    // Realizar el JOIN con la tabla de tipos de vehículo
-    $builder->join('tbl_tipo_vehiculo tt', 'tv.Id_Tipo_Vehiculo = tt.Id_Tipo_Vehiculo', 'left');
-
-    // Obtener los resultados de vehículos
-    $datos['vehiculos'] = $builder->select('tv.*, tt.Nombre_Tipo_Vehiculo AS tipo_vehiculo_nombre')
-                                   ->get()
-                                   ->getResultArray();
-
-    // Obtener tipos de vehículos
-    $tipoVehiculosModel = new TipoVehiculosModel();
-    $datos['tipos'] = $tipoVehiculosModel->findAll();
-
-    // Cargar la vista, pasando los datos
-    return view('vehiculos', $datos);
-}
-
-
- // Función para agregar un nuevo tipo de vehículo
- public function agregarTipoVehiculo()
- {
-     // Obtener el nombre del tipo de vehículo del formulario
-     $nombreTipo = $this->request->getPost('nombre_tipo');
- 
-     // Validar el input (opcional pero recomendable)
-     if (empty($nombreTipo)) {
-         return redirect()->to('registro-vehiculo')->with('error', 'El nombre del tipo de vehículo es obligatorio.');
-     }
- 
-     // Agregar el tipo de vehículo al modelo
-     $tipoVehiculosModel = new \App\Models\TipoVehiculosModel();
-     $tipoVehiculosModel->agregarTipoVehiculo(['Nombre_Tipo_Vehiculo' => $nombreTipo]);
- 
-     // Redirigir a la página de vehículos después de agregar
-     return redirect()->to('registro-vehiculo')->with('success', 'Tipo de vehículo agregado exitosamente.');
- }
-
-
-// Función para agregar un nuevo vehículo
-public function agregarVehiculo()
-{
-
-    $VehiculosModel = new VehiculosModel();
-    $data = [
-        'Marca' => $this->request->getVar('marca'),
-        'Linea'  => $this->request->getVar('linea'),
-        'Id_Tipo_Vehiculo'  => $this->request->getVar('tipo_vehiculo'),
-    ];
-    $VehiculosModel->insert($data);
-    return $this->response->redirect(site_url('registro-vehiculo'));
-
+    return $this->response->redirect(site_url('ver-Cliente'));
 }
 
 }

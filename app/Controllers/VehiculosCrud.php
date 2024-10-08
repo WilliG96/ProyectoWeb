@@ -2,6 +2,7 @@
 namespace App\Controllers;
 use App\Models\VehiculosModel;
 use App\Models\TipoVehiculosModel;
+use App\Models\TallerModel;
 use CodeIgniter\Controller;
 
 class VehiculosCrud extends Controller
@@ -36,27 +37,17 @@ public function verVehiculos()
  // Función para agregar un nuevo tipo de vehículo
  public function agregarTipoVehiculo()
  {
-     // Obtener el nombre del tipo de vehículo del formulario
-     $nombreTipo = $this->request->getPost('nombre_tipo');
- 
-     // Validar el input (opcional pero recomendable)
-     if (empty($nombreTipo)) {
-         return redirect()->to('registro-vehiculo')->with('error', 'El nombre del tipo de vehículo es obligatorio.');
-     }
- 
-     // Agregar el tipo de vehículo al modelo
-     $tipoVehiculosModel = new \App\Models\TipoVehiculosModel();
-     $tipoVehiculosModel->agregarTipoVehiculo(['Nombre_Tipo_Vehiculo' => $nombreTipo]);
- 
-     // Redirigir a la página de vehículos después de agregar
-     return redirect()->to('registro-vehiculo')->with('success', 'Tipo de vehículo agregado exitosamente.');
+    $TipoVehiculosModel = new TipoVehiculosModel();
+    $data = ['Nombre_Tipo_Vehiculo' => $this->request->getVar('nombre_tipo'),
+    ];
+    $TipoVehiculosModel->insert($data);
+    return $this->response->redirect(site_url('registro-vehiculo'));
  }
 
 
 // Función para agregar un nuevo vehículo
 public function agregarVehiculo()
 {
-
     $VehiculosModel = new VehiculosModel();
     $data = [
         'Marca' => $this->request->getVar('marca'),
@@ -67,6 +58,28 @@ public function agregarVehiculo()
     return $this->response->redirect(site_url('registro-vehiculo'));
 
 }
+
+public function verServicios()
+{
+    // Conectar a la base de datos
+    $db = \Config\Database::connect();
+    
+    // Crear un constructor de consultas
+    $builder = $db->table('tbl_servicios ts');
+    
+    // Realizar el JOIN con la tabla de tipos de vehículo
+    $builder->join('tbl_usuarios tu', 'ts.Id_Usuario = tu.Id_Usuario', 'left');
+
+    // Obtener los resultados de vehículos
+    $datos['servicios'] = $builder->select('ts.*, tu.Usuario_Asignado AS usuario')
+                                   ->get()
+                                   ->getResultArray();
+        
+    // Devolver los datos para su uso en la vista
+    return view('servicios', $datos);
+
+}
+
 
 }
 

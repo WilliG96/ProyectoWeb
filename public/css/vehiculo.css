@@ -10,7 +10,7 @@ body {
     color: white;
     padding: 20px;
     width: 250px;
-    border-radius: 15px; /* Bordes redondeados */
+    border-radius: 20px; /* Bordes redondeados */
     margin-right: 20px; /* Espacio entre la barra y el contenido */
 }
 .barra-lateral h2 {
@@ -34,12 +34,18 @@ body {
 .contenido-principal {
     flex: 1;
     width: 800px; /* Fija el ancho */
-    height: 620px; /* Fija la altura */
+    height: 625px; /* Fija la altura */
     padding: 20px;
-    background-image: url(../images/mecanica1.jpg);
-    border-radius: 10px; /* Bordes redondeados */
+    background-image: url(../images/mecanica.jpg);
+    background-size: cover; /* Asegura que la imagen de fondo se ajuste al tamaño */
+    border-radius: 20px; /* Bordes redondeados */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    color: #000000;
+    text-align: center;
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    overflow: hidden; /* Evita que el contenido se desborde */
 }
+
 .tabla-tickets {
     margin-top: 20px;
 }
@@ -52,9 +58,4 @@ body {
     color: #ffffff;
     font-weight: bold;
     border: #000000;
-}
-
-.btn-success :hover{
-    background-color: #fcfcfc; /* Nuevo color de fondo al pasar el mouse */
-    color: #000000;  
 }

@@ -5,26 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tickets Activos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url('css/inicio.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/principal.css') ?>">
     <style>
-        .table-responsive {
-            max-height: 300px; /* Ajustar la altura máxima */
-            overflow-y: auto; /* Habilitar scroll vertical */
-        }
+    .table-responsive {
+        max-height: 500px; 
+        overflow-y: auto; 
+        position: relative; 
+    }
+
+    .table-responsive table {
+        background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+        backdrop-filter: blur(20px); /* Desenfoque en el fondo */
+        border-radius: 20px; /* Bordes redondeados */
+        width: 100%;
+    }
+
+    .table-responsive th {
+        background-color: rgba(0, 0, 0, 0.7); 
+        color: white; 
+        padding: 10px;
+    }
+
+    .table-responsive td {
+        padding: 10px;
+        color: black; 
+    }
     </style>
 </head>
 <body>
     <div class="contenedor">
         <!-- Barra lateral -->
         <nav class="barra-lateral">
-            <h2>Taller Mecánico</h2>
+            <h3>Taller Mecánico</h3>
             <ul>
             <li><a href="<?= base_url('inicio-taller'); ?>">Inicio</a></li>
                 <li><a href="#">Tickets Activos</a></li>
-                <li><a href="#">Crear Nuevo Ticket</a></li>
-                <li><a href="#">Clientes</a></li>
+                <li><a href="<?= base_url('crear-ticket'); ?>">Crear Nuevo Ticket</a></li>
+                <li><a href="<?= base_url('ver-Cliente') ?>">Clientes</a></li>
                 <li><a href="<?= base_url('registrar-cliente') ?>">Crear Nuevo Cliente</a></li>
                 <li><a href="<?= base_url('registro-vehiculo') ?>">Registrar Vehículo</a></li>
+                <li><a href="<?= base_url('servicios') ?>">Servicios</a></li>
                 <li><a href="#">Configuraciones</a></li>
             </ul>
         </nav>

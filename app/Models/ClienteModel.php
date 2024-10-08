@@ -13,22 +13,4 @@ class ClienteModel extends Model
     // Campos permitidos para insertar o actualizar
     protected $allowedFields = ['Nombre_Cliente', 'Apellido_Cliente','Direccion_Cliente','Telefono_Cliente', 
     'DPI_CUI', 'Id_Municipio','Id_Departamento', 'Id_Usuario'];
-
-    // Método para obtener todos los tipos de vehículos
-    public function obtenerDepartamentos()
-    {
-        return $this->findAll(); // Obtener todos los tipos de vehículos
-    }
-
-    // Método para agregar un nuevo cliente
-    public function agregarCliente($data)
-    {
-        return $this->insert($data);
-    }
-
-    // Método para eliminar un tipo de vehículo
-    public function eliminarTipoVehiculo($id)
-    {
-        return $this->delete($id);
-    }
 }

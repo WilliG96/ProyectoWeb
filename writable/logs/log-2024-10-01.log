@@ -1,0 +1,557 @@
+CRITICAL - 2024-10-01 03:41:36 --> ErrorException: Undefined property: stdClass::$id
+[Method: POST, Route: login-chek]
+in APPPATH\Controllers\TallerCrud.php on line 50.
+ 1 APPPATH\Controllers\TallerCrud.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\TallerCrud.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TallerCrud->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TallerCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 03:42:14 --> ErrorException: Undefined property: stdClass::$id
+[Method: POST, Route: login-chek]
+in APPPATH\Controllers\TallerCrud.php on line 50.
+ 1 APPPATH\Controllers\TallerCrud.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\TallerCrud.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TallerCrud->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TallerCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-01 04:10:27 --> mysqli_sql_exception: Unknown column 'tt.Usuario_Asignado' in 'field list' in C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, ...', 0)
+#1 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, ...')
+#2 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, ...')
+#3 C:\xampp\htdocs\ProyectoWC\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, ...', Array, false)
+#4 C:\xampp\htdocs\ProyectoWC\app\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+#6 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+#7 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ProyectoWC\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ProyectoWC\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ProyectoWC\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-01 04:10:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tt.Usuario_Asignado' in 'field list'
+[Method: GET, Route: servicios]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 2 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:10:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tt.Usuario_Asignado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 4 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:10:28 --> [Caused by] mysqli_sql_exception: Unknown column 'tt.Usuario_Asignado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 5 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-01 04:10:29 --> mysqli_sql_exception: Unknown column 'tt.Usuario_Asignado' in 'field list' in C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, ...', 0)
+#1 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, ...')
+#2 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, ...')
+#3 C:\xampp\htdocs\ProyectoWC\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, ...', Array, false)
+#4 C:\xampp\htdocs\ProyectoWC\app\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+#6 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+#7 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ProyectoWC\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ProyectoWC\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ProyectoWC\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-01 04:10:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tt.Usuario_Asignado' in 'field list'
+[Method: GET, Route: servicios]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 2 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:10:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tt.Usuario_Asignado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 4 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:10:29 --> [Caused by] mysqli_sql_exception: Unknown column 'tt.Usuario_Asignado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 5 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-01 04:10:30 --> mysqli_sql_exception: Unknown column 'tt.Usuario_Asignado' in 'field list' in C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, ...', 0)
+#1 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, ...')
+#2 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, ...')
+#3 C:\xampp\htdocs\ProyectoWC\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, ...', Array, false)
+#4 C:\xampp\htdocs\ProyectoWC\app\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+#6 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+#7 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ProyectoWC\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ProyectoWC\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ProyectoWC\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-01 04:10:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tt.Usuario_Asignado' in 'field list'
+[Method: GET, Route: servicios]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 2 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:10:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tt.Usuario_Asignado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 4 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:10:30 --> [Caused by] mysqli_sql_exception: Unknown column 'tt.Usuario_Asignado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 5 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-01 04:10:48 --> mysqli_sql_exception: Unknown column 'tt.Usuario_Asignado' in 'field list' in C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, ...', 0)
+#1 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, ...')
+#2 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, ...')
+#3 C:\xampp\htdocs\ProyectoWC\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, ...', Array, false)
+#4 C:\xampp\htdocs\ProyectoWC\app\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+#6 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+#7 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ProyectoWC\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ProyectoWC\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ProyectoWC\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-01 04:10:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tt.Usuario_Asignado' in 'field list'
+[Method: GET, Route: servicios]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 2 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:10:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tt.Usuario_Asignado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 4 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:10:48 --> [Caused by] mysqli_sql_exception: Unknown column 'tt.Usuario_Asignado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 5 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-01 04:11:11 --> mysqli_sql_exception: Unknown column 'tt.Usuario_Asignado' in 'field list' in C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, ...', 0)
+#1 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, ...')
+#2 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, ...')
+#3 C:\xampp\htdocs\ProyectoWC\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, ...', Array, false)
+#4 C:\xampp\htdocs\ProyectoWC\app\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+#6 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+#7 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ProyectoWC\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ProyectoWC\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ProyectoWC\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-01 04:11:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tt.Usuario_Asignado' in 'field list'
+[Method: GET, Route: servicios]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 2 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:11:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tt.Usuario_Asignado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 4 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:11:11 --> [Caused by] mysqli_sql_exception: Unknown column 'tt.Usuario_Asignado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 5 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-01 04:11:19 --> mysqli_sql_exception: Unknown column 'tt.Usuario_Asignado' in 'field list' in C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, ...', 0)
+#1 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, ...')
+#2 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, ...')
+#3 C:\xampp\htdocs\ProyectoWC\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, ...', Array, false)
+#4 C:\xampp\htdocs\ProyectoWC\app\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+#6 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+#7 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ProyectoWC\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ProyectoWC\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ProyectoWC\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-01 04:11:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tt.Usuario_Asignado' in 'field list'
+[Method: GET, Route: servicios]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 2 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:11:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tt.Usuario_Asignado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 4 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:11:19 --> [Caused by] mysqli_sql_exception: Unknown column 'tt.Usuario_Asignado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 5 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-01 04:12:29 --> mysqli_sql_exception: Unknown column 'tt.Usuario_Asignado' in 'field list' in C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, ...', 0)
+#1 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, ...')
+#2 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, ...')
+#3 C:\xampp\htdocs\ProyectoWC\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, ...', Array, false)
+#4 C:\xampp\htdocs\ProyectoWC\app\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+#6 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+#7 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ProyectoWC\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ProyectoWC\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ProyectoWC\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-01 04:12:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tt.Usuario_Asignado' in 'field list'
+[Method: GET, Route: servicios]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 2 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:12:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tt.Usuario_Asignado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 4 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:12:29 --> [Caused by] mysqli_sql_exception: Unknown column 'tt.Usuario_Asignado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tt`.`Usuario_Asignado` AS `usuario`
+FROM `tbl_servicios` `ts`
+LEFT JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`', [], false)
+ 5 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:22:44 --> ErrorException: Undefined variable $cliente
+[Method: GET, Route: servicios]
+in APPPATH\Views\servicios.php on line 130.
+ 1 APPPATH\Views\servicios.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cliente', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\servicios.php', 130)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('servicios', [], true)
+ 5 APPPATH\Controllers\VehiculosCrud.php(89): view('servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:22:45 --> ErrorException: Undefined variable $cliente
+[Method: GET, Route: servicios]
+in APPPATH\Views\servicios.php on line 130.
+ 1 APPPATH\Views\servicios.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cliente', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\servicios.php', 130)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('servicios', [], true)
+ 5 APPPATH\Controllers\VehiculosCrud.php(89): view('servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 04:22:45 --> ErrorException: Undefined variable $cliente
+[Method: GET, Route: servicios]
+in APPPATH\Views\servicios.php on line 130.
+ 1 APPPATH\Views\servicios.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cliente', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\servicios.php', 130)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('servicios', [], true)
+ 5 APPPATH\Controllers\VehiculosCrud.php(89): view('servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicios()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 05:11:13 --> BadMethodCallException: Call to undefined method App\Models\TipoVehiculosModel::agregarTipoVehiculo
+[Method: POST, Route: agregar-TipoVehiculo]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\VehiculosCrud.php(50): CodeIgniter\Model->__call('agregarTipoVehiculo', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->agregarTipoVehiculo()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 05:17:07 --> Error: Class "App\Controllers\TiposVehiculosModel" not found
+[Method: POST, Route: agregar-TipoVehiculo]
+in APPPATH\Controllers\VehiculosCrud.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->agregarTipoVehiculo()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-01 05:30:08 --> ErrorException: Undefined variable $offset
+[Method: GET, Route: registro-vehiculo]
+in APPPATH\Views\vehiculos.php on line 134.
+ 1 APPPATH\Views\vehiculos.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $offset', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\vehiculos.php', 134)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\vehiculos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('vehiculos', [], true)
+ 5 APPPATH\Controllers\VehiculosCrud.php(33): view('vehiculos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verVehiculos()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

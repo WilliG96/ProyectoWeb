@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Vehículo</title>
+    <title>Serivicios Mecánicos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url('css/vehiculo.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('css/servicio.css'); ?>">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
     <style>
     .table-responsive {
@@ -15,9 +15,9 @@
     }
 
     .table-responsive table {
-        background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+        background-color: white; /* Fondo semitransparente */
         backdrop-filter: blur(10px); /* Desenfoque en el fondo */
-        border-radius: 5px; /* Bordes redondeados */
+        border-radius: 15px; /* Bordes redondeados */
         width: 100%;
     }
 
@@ -67,10 +67,6 @@
     border-radius: 20px; /* Ajusta el valor según lo redondeado que desees */
     }
 
-    .btn {
-    margin-right: 10px; /* Ajusta el valor según la separación deseada */
-}
-
     </style>
 </head>
 <body>
@@ -93,116 +89,79 @@
         <!-- Contenido principal -->
         <div class="contenido-principal">
             <header>
-                <h1>Vehículos Registrados</h1>
+                <h1>Servicios Del Taller</h1>
             </header>
 
+            <!-- Botón para abrir el modal -->
             <div class="text-center mb-4">
-                <!-- Botones para abrir modales -->
-                <button type="button" id="btn-agregar-tipo" class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarTipo">Agregar Tipo de Vehículo</button>
-                <button type="button" id="btn-agregar-vehiculo" class="btn btn-secondary" data-toggle="modal" data-target="#modalAgregarVehiculo">Agregar Vehículo</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarServicio">
+                    Agregar Servicio
+                </button>
             </div>
 
-            <!-- Ventana Modal para Agregar Nuevo Tipo de Vehículo -->
-            <div class="modal fade" id="modalAgregarTipo" tabindex="-1" role="dialog" aria-labelledby="modalAgregarTipoLabel" aria-hidden="true">
+            <!-- Modal -->
+            <div class="modal fade" id="modalAgregarServicio" tabindex="-1" role="dialog" aria-labelledby="modalAgregarServicioLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="modalAgregarTipoLabel">Agregar Tipo de Vehículo</h5>
+                            <h5 class="modal-title" id="modalAgregarServicioLabel">Agregar Nuevo Servicio</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="<?= base_url('agregar-TipoVehiculo'); ?>" method="post">
+                            <!-- Formulario dentro del modal -->
+                            <form action="<?= base_url('guardar-servicio'); ?>" method="post" id="formAgregarServicio">
                                 <div class="form-group">
-                                    <label for="nombre_tipo">Nombre del Tipo de Vehículo:</label>
-                                    <input type="text" class="form-control" id="nombre_tipo" name="nombre_tipo" required>
+                                    <label for="servicio">Nombre Servicio:</label>
+                                    <input type="text" class="form-control" id="servicio" name="servicio" required>
                                 </div>
+                                <div class="form-group">
+                                    <label for="costo">Costo Servicio:</label>
+                                    <input type="number" class="form-control" id="costo" name="costo" required>
+                                </div>
+                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            <button type="submit" class="btn btn-primary">Agregar</button>
+                            <button type="submit" class="btn btn-primary" form="formAgregarServicio">Guardar</button>
                         </div>
-                        </form>
                     </div>
                 </div>
             </div>
 
-            <!-- Ventana Modal para Agregar Nuevo Vehículo -->
-            <div class="modal fade" id="modalAgregarVehiculo" tabindex="-1" role="dialog" aria-labelledby="modalAgregarVehiculoLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalAgregarVehiculoLabel">Registrar Vehículo</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="<?= base_url('guardar-Vehiculo'); ?>" method="post">
-                                <div class="form-row">
-                                    <div class="form-group col-md-4">
-                                        <label for="marca">Marca:</label>
-                                        <input type="text" class="form-control" id="marca" name="marca" required>
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="linea">Línea:</label>
-                                        <input type="text" class="form-control" id="linea" name="linea" required>
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="tipo_vehiculo">Tipo de Vehículo:</label>
-                                        <select class="form-control" id="tipo_vehiculo" name="tipo_vehiculo" required>
-                                            <option value="">Seleccionar Tipo</option>
-                                            <?php foreach ($tipos as $tipo): ?>
-                                                <option value="<?= $tipo['Id_Tipo_Vehiculo']; ?>"><?= htmlspecialchars($tipo['Nombre_Tipo_Vehiculo']); ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            <button type="submit" class="btn btn-primary">Registrar Vehículo</button>
-                        </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tabla de Vehículos Registrados -->
+            <!-- Tabla de Servicios Registrados -->
             <div class="table-responsive">
-                <table class="table table-bordered" id="vehiculos-list">
+                <table class="table table-bordered" id="clientes-list">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Marca</th>
-                            <th>Línea</th>
-                            <th>Tipo de Vehículo</th>
+                            <th>Servicio</th>
+                            <th>Costo Estimado</th>
+                            <th>Usuario</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
-
                     <tbody>
-                        <?php if (!empty($vehiculos)): ?>
-                            <?php foreach ($vehiculos as $vehiculo): ?>
+                        <?php if (!empty($servicios)): ?>
+                            <?php foreach ($servicios as $servicio): ?>
                                 <tr>
-                                    <td><?= htmlspecialchars($vehiculo['Id_Vehiculo']); ?></td>
-                                    <td><?= htmlspecialchars($vehiculo['Marca']); ?></td>
-                                    <td><?= htmlspecialchars($vehiculo['Linea']); ?></td>
-                                    <td><?= htmlspecialchars($vehiculo['tipo_vehiculo_nombre']); ?></td>
+                                    <td><?= htmlspecialchars($servicio['Id_Servicio']); ?></td>
+                                    <td><?= htmlspecialchars($servicio['Nombre_Servicio']); ?></td>
+                                    <td><?= htmlspecialchars($servicio['Costo_Servicio']); ?></td>
+                                    <td><?= htmlspecialchars($servicio['usuario']); ?></td>
                                     <td class="action-buttons">
-                                        <a href="<?= base_url('TallerCrud/editarVehiculo/'.$vehiculo['Id_Vehiculo']); ?>" class='btn btn-primary btn-sm'>Editar</a>
-                                        <a href="<?= base_url('TallerCrud/eliminarVehiculo/'.$vehiculo['Id_Vehiculo']); ?>" class='btn btn-danger btn-sm' onclick='return confirm("¿Estás seguro de que quieres eliminar este vehículo?");'>Eliminar</a>
+                                        <a href="<?= base_url('ClienteCrud/editarCliente/'.$servicio['Id_Servicio']); ?>" class='btn btn-primary btn-sm'>Editar</a>
+                                        <a href="<?= base_url('ClienteCrud/eliminarCliente/'.$servicio['Id_Servicio']); ?>" class='btn btn-danger btn-sm' onclick='return confirm("¿Estás seguro de que quieres eliminar este cliente?");'>Eliminar</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
                         <?php else: ?>
                             <tr>
-                                <td colspan="5">No hay clientes registrados.</td>
+                                <td colspan="7">No hay servicios registrados.</td>
                             </tr>
                         <?php endif; ?>
                     </tbody>
-
                 </table>
             </div>
         </div>
@@ -215,7 +174,7 @@
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#vehiculos-list').DataTable({
+            $('#servicios-list').DataTable({
                 "language": {
             "search": "Buscar:",          // Cambia "Search" a "Buscar"
             "paginate": {
@@ -235,4 +194,3 @@
     </script>
 </body>
 </html>
-

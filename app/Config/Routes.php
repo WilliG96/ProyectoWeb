@@ -15,11 +15,15 @@ $routes->get('inicio-taller', 'TallerCrud::inicio');        // Formulario para a
 $routes->get('registro-vehiculo', 'VehiculosCrud::verVehiculos');
 $routes->post('agregar-TipoVehiculo', 'VehiculosCrud::agregarTipoVehiculo');
 $routes->post('guardar-Vehiculo', 'VehiculosCrud::agregarVehiculo');
+$routes->get('servicios', 'VehiculosCrud::verServicios');
 
 // ruta para los clientes
 $routes->get('registrar-cliente', 'ClienteCrud::Cliente');
 $routes->post('guardar-Cliente', 'ClienteCrud::guardarCliente');
+$routes->get('ver-Cliente', 'ClienteCrud::verCliente');
 
+// ruta para los tickets
+$routes->get('crear-ticket', 'TicketCrud::crearTicket');
 
 $routes->post('store-cliente', 'TallerCrud::store');       // Almacenar nuevo cliente
 $routes->get('edit-cliente/(:num)', 'TallerCrud::singleCliente/$1'); // Editar cliente

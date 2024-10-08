@@ -8,41 +8,48 @@
     <link rel="stylesheet" href="<?= base_url('css/cliente.css') ?>">
     <style>
         .form-container {
-            max-width: 800px;
+            max-width: 750px;
+            height: 570px;
+            top: 5px;
             margin: 15px auto;
             padding: 15px;
             background-color: rgba(92, 90, 90, 0.2); /* Cambia el 0.7 para ajustar la opacidad */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
-            backdrop-filter: blur(10px); /* Aplica un desenfoque al fondo */
+            backdrop-filter: blur(8px); /* Aplica un desenfoque al fondo */
         }
 
         .form-container label {
-            color: black;        /* Color del texto */
+            color: #000000;        /* Color del texto */
             font-weight: bold;   /* Texto en negrita */
-            font-size: 15px;     /* Tamaño de fuente de 15px */
+            font-size: 18px;     /* Tamaño de fuente de 15px */
         }
 
         .form-header {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             text-align: center;
             color: #000000;
           
         }
+        h2{
+        color: #000000;
+        font-weight: bold;
+    }
     </style>
 </head>
 <body>
     <div class="contenedor">
         <!-- Barra lateral -->
         <nav class="barra-lateral">
-            <h2>Taller Mecánico</h2>
+            <h3>Taller Mecánico</h3>
             <ul>
                 <li><a href="<?= base_url('inicio-taller'); ?>">Inicio</a></li>
                 <li><a href="#">Tickets Activos</a></li>
-                <li><a href="#">Crear Nuevo Ticket</a></li>
-                <li><a href="#">Clientes</a></li>
+                <li><a href="<?= base_url('crear-ticket'); ?>">Crear Nuevo Ticket</a></li>
+                <li><a href="<?= base_url('ver-Cliente') ?>">Clientes</a></li>
                 <li><a href="<?= base_url('registrar-cliente') ?>">Crear Nuevo Cliente</a></li>
                 <li><a href="<?= base_url('registro-vehiculo') ?>">Registrar Vehículo</a></li>
+                <li><a href="<?= base_url('servicios') ?>">Servicios</a></li>
                 <li><a href="#">Configuraciones</a></li>
             </ul>
         </nav>

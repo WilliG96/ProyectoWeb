@@ -47,8 +47,8 @@ class TallerCrud extends Controller
         if ($usuarioEncontrado) {
             // Establecer los datos del usuario en la sesión
             session()->set('usuario', [
-                'id_usuario' => $usuarioEncontrado->id,  // Aquí almacenamos el ID del usuario
-                'username' => $usuarioEncontrado->usuario,  // O cualquier otro campo que quieras usar
+                'id_usuario' => $usuarioEncontrado->Id_Usuario,  // Aquí almacenamos el ID del usuario
+                'username' => $usuarioEncontrado->Usuario_Asignado,  // O cualquier otro campo que quieras usar
                 // Puedes añadir más campos si lo deseas
             ]);
     
