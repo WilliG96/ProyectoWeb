@@ -1,0 +1,256 @@
+body {
+    background-color: #f8f9fa; 
+}
+.contenedor {
+    display: flex;
+    margin: 20px; 
+}
+.barra-lateral {
+    background-color: #000000; 
+    color: white;
+    padding: 20px;
+    width: 250px;
+    height: 590px;
+    border-radius: 20px; 
+    margin-right: 20px; 
+}
+.barra-lateral h2 {
+    color: #ffffff;
+}
+.barra-lateral ul {
+    list-style-type: none;
+    padding: 0;
+}
+.barra-lateral ul li {
+    margin: 10px 0;
+}
+.barra-lateral ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.barra-lateral ul li a:hover {
+    text-decoration: underline;
+}
+
+.contenido-principal {
+    display: flex;           
+    flex-direction: column;   
+    flex: 1;
+    width: 800px; 
+    height: 590px; 
+    padding: 20px;
+    background-image: url(../images/admin.jpg);
+    background-size: cover;
+    border-radius: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    color: #000000;
+    text-align: center;
+    margin: 0 auto; 
+    overflow: hidden; 
+}
+
+.tabla-tickets {
+    flex: 1;                 
+    margin-top: 20px;
+}
+
+.table-responsive {
+    max-height: 100%;        
+    overflow-y: auto;
+    position: relative; 
+    flex: 1;                 
+}
+
+.table-responsive table {
+    width: 100%;                       
+    background-color: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(10px); 
+    border-radius: 5px; 
+}
+
+.table-responsive th, .table-responsive td {
+    padding: 10px;
+    white-space: nowrap;     
+    color: black;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+   color: white !important;    
+   font-weight: bold !important; 
+   background-color: transparent; 
+   border: none;                 
+}
+
+.dataTables_paginate .paginate_button:hover {
+    color: #f0f0f0;      
+}
+
+
+.dataTables_paginate .paginate_button.current {
+    color: #ffffff;           
+    background-color: #007bff; 
+    border: none;          
+}
+h2{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+h1{
+    color: #000000;
+    font-weight: bold;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+   color: white !important;    
+   font-weight: bold !important; 
+   background-color: transparent; 
+   border: none;                 
+}
+
+ .barra-lateral {
+    width: 48px; 
+    background: #000000;
+    color: white;
+    padding: 15px;
+    transition: width 0.3s;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.barra-lateral h3 {
+    display: none; 
+}
+
+.barra-lateral ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.barra-lateral ul li {
+    margin: 10px 0;
+}
+
+.barra-lateral ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.barra-lateral ul li a i {
+    margin-right: 15px; 
+}
+
+.barra-lateral:hover {
+    width: 250px;
+}
+
+.barra-lateral:hover h3 {
+    display: block;
+}
+
+.barra-lateral:hover ul li a span {
+    display: inline;
+}
+
+.barra-lateral ul li a span {
+    display: none;
+}
+
+.header-titulo {
+background-color: #000000; 
+color: white; 
+text-align: center; 
+padding:0px 0; 
+font-weight: bold;
+margin-bottom: 0; 
+top: 5px;
+}
+
+.header-titulo h2 {
+    color: #ffffff;
+}
+
+.btn-custom-active {
+background-color: #28a745; 
+color: white;
+border-color: #28a745;
+}
+
+.btn-custom-active:hover {
+background-color: #218838;
+border-color: #1e7e34;
+}
+
+.btn-custom-inactive {
+background-color: #dc3545; 
+color: white;
+border-color: #dc3545;
+}
+
+.btn-custom-inactive:hover {
+background-color: #c82333;
+border-color: #bd2130;
+}
+
+.btn-custom-new {
+background-color: #007bff; 
+color: white;
+border-color: #007bff;
+}
+
+.btn-custom-new:hover {
+background-color: #0069d9;
+border-color: #005cbf;
+}
+
+.contenido-principal{
+background-color: rgba(255, 255, 255, 0.5); 
+backdrop-filter: blur(10px); 
+}
+
+.modal-body {
+display: flex;
+flex-direction: column; 
+}
+
+.d-flex {
+display: flex; 
+justify-content: space-between; 
+}
+
+.d-flex p {
+margin: 20 2px; 
+}
+
+.mb-2 {
+margin-bottom: 0.5rem; 
+}
+
+.action-buttons {
+    white-space: nowrap;
+}
+
+.action-buttons .btn {
+    margin-right: 5px; 
+}
+
+    .input-group {
+    max-width: 300px; 
+    margin: 0 auto;   
+}
+
+
+.btn-black {
+    background-color: black; 
+    border-color: black;    
+    color: white;          
+}
+
+
+.btn-black:hover {
+    background-color: #333; 
+    border-color: #333;     
+}

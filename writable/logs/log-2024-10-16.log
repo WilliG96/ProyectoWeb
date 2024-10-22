@@ -1,0 +1,281 @@
+CRITICAL - 2024-10-16 00:29:00 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: obtenerUsuario/1]
+in APPPATH\Views\edit_user.php on line 34.
+ 1 APPPATH\Views\edit_user.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_user.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_user.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_user', [], true)
+ 5 APPPATH\Controllers\TallerCrud.php(194): view('edit_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TallerCrud->singleUser('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TallerCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 00:29:53 --> ErrorException: Undefined array key "Id_Cliente"
+[Method: GET, Route: obtenerCliente/1]
+in APPPATH\Views\edit_cliente.php on line 34.
+ 1 APPPATH\Views\edit_cliente.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Id_Cliente"', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(69): view('edit_cliente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->verClienteId('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 00:30:10 --> ErrorException: Undefined array key "Id_Cliente"
+[Method: GET, Route: obtenerCliente/2]
+in APPPATH\Views\edit_cliente.php on line 34.
+ 1 APPPATH\Views\edit_cliente.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Id_Cliente"', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(69): view('edit_cliente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->verClienteId('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 00:32:21 --> ErrorException: Undefined array key "Id_Cliente"
+[Method: GET, Route: obtenerCliente/2]
+in APPPATH\Views\edit_cliente.php on line 34.
+ 1 APPPATH\Views\edit_cliente.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Id_Cliente"', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(71): view('edit_cliente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->verClienteId('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 00:32:49 --> ErrorException: Undefined array key "Id_Cliente"
+[Method: GET, Route: obtenerCliente/2]
+in APPPATH\Views\edit_cliente.php on line 34.
+ 1 APPPATH\Views\edit_cliente.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Id_Cliente"', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(71): view('edit_cliente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->verClienteId('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 00:34:57 --> ErrorException: Undefined array key "Id_Cliente"
+[Method: GET, Route: obtenerCliente/2]
+in APPPATH\Views\edit_cliente.php on line 34.
+ 1 APPPATH\Views\edit_cliente.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Id_Cliente"', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(71): view('edit_cliente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->verClienteId('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 00:35:17 --> ErrorException: Undefined array key "Id_Cliente"
+[Method: GET, Route: obtenerCliente/2]
+in APPPATH\Views\edit_cliente.php on line 34.
+ 1 APPPATH\Views\edit_cliente.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Id_Cliente"', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(71): view('edit_cliente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->verClienteId('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 00:37:33 --> ErrorException: Undefined array key "Id_Cliente"
+[Method: GET, Route: obtenerCliente/1]
+in APPPATH\Views\edit_cliente.php on line 34.
+ 1 APPPATH\Views\edit_cliente.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Id_Cliente"', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(71): view('edit_cliente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->verClienteId('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 00:37:39 --> ErrorException: Undefined array key "Id_Cliente"
+[Method: GET, Route: obtenerCliente/3]
+in APPPATH\Views\edit_cliente.php on line 34.
+ 1 APPPATH\Views\edit_cliente.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Id_Cliente"', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(71): view('edit_cliente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->verClienteId('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 01:13:32 --> ErrorException: Undefined array key "Id_Departamento"
+[Method: GET, Route: obtenerCliente/4]
+in APPPATH\Views\edit_cliente.php on line 69.
+ 1 APPPATH\Views\edit_cliente.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Id_Departamento"', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php', 69)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(81): view('edit_cliente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->verClienteId('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 01:13:44 --> ErrorException: Undefined array key "Id_Departamento"
+[Method: GET, Route: obtenerCliente/4]
+in APPPATH\Views\edit_cliente.php on line 69.
+ 1 APPPATH\Views\edit_cliente.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Id_Departamento"', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php', 69)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_cliente', [], true)
+ 5 APPPATH\Controllers\ClienteCrud.php(81): view('edit_cliente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->verClienteId('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 01:40:40 --> Error: Class "App\Controllers\ClientesModel" not found
+[Method: POST, Route: editar-cliente]
+in APPPATH\Controllers\ClienteCrud.php on line 190.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClienteCrud->actualizarCliente()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 02:06:53 --> ErrorException: Undefined variable $vehiculos
+[Method: GET, Route: crear-ticket]
+in APPPATH\Views\crear_ticket.php on line 145.
+ 1 APPPATH\Views\crear_ticket.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vehiculos', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\crear_ticket.php', 145)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\crear_ticket.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('crear_ticket', [], true)
+ 5 APPPATH\Controllers\TicketCrud.php(20): view('crear_ticket')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TicketCrud->crearTicket()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 02:15:34 --> Error: Class "App\Controllers\ServiciosModel" not found
+[Method: GET, Route: crear-ticket]
+in APPPATH\Controllers\TicketCrud.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TicketCrud->crearTicket()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 02:25:58 --> Error: Class "App\Controllers\ServiciosModel" not found
+[Method: GET, Route: crear-ticket]
+in APPPATH\Controllers\TicketCrud.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TicketCrud->crearTicket()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 02:26:00 --> Error: Class "App\Controllers\ServiciosModel" not found
+[Method: GET, Route: crear-ticket]
+in APPPATH\Controllers\TicketCrud.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TicketCrud->crearTicket()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 02:41:42 --> Error: Class "App\Controllers\ServiciosModel" not found
+[Method: GET, Route: crear-ticket]
+in APPPATH\Controllers\TicketCrud.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TicketCrud->crearTicket()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 02:41:43 --> Error: Class "App\Controllers\ServiciosModel" not found
+[Method: GET, Route: crear-ticket]
+in APPPATH\Controllers\TicketCrud.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TicketCrud->crearTicket()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 02:42:17 --> Error: Class "App\Controllers\ServiciosModel" not found
+[Method: GET, Route: crear-ticket]
+in APPPATH\Controllers\TicketCrud.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TicketCrud->crearTicket()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 03:49:45 --> Error: Class "App\Controllers\ServiciosModel" not found
+[Method: GET, Route: crear-ticket]
+in APPPATH\Controllers\TicketCrud.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TicketCrud->crearTicket()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 03:50:30 --> Error: Class "App\Controllers\ServiciosModel" not found
+[Method: GET, Route: crear-ticket]
+in APPPATH\Controllers\TicketCrud.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TicketCrud->crearTicket()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 03:53:47 --> Error: Class "App\Controllers\ServiciosModel" not found
+[Method: GET, Route: crear-ticket]
+in APPPATH\Controllers\TicketCrud.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TicketCrud->crearTicket()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 03:55:26 --> Error: Class "App\Controllers\ServiciosModel" not found
+[Method: GET, Route: crear-ticket]
+in APPPATH\Controllers\TicketCrud.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TicketCrud->Ticket()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-16 05:51:53 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: obtenerUsuario/1]
+in APPPATH\Views\edit_user.php on line 34.
+ 1 APPPATH\Views\edit_user.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_user.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ProyectoWC\\app\\Views\\edit_user.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_user', [], true)
+ 5 APPPATH\Controllers\TallerCrud.php(194): view('edit_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TallerCrud->singleUser('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TallerCrud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

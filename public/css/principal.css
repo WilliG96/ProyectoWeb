@@ -10,6 +10,7 @@ body {
     color: white;
     padding: 20px;
     width: 250px;
+    height: 590px;
     border-radius: 20px; /* Bordes redondeados */
     margin-right: 20px; /* Espacio entre la barra y el contenido */
 }
@@ -31,20 +32,38 @@ body {
 .barra-lateral ul li a:hover {
     text-decoration: underline;
 }
+
 .contenido-principal {
+    position: relative; /* Necesario para el pseudo-elemento */
     flex: 1;
-    width: 800px; /* Fija el ancho */
-    height: 600px; /* Fija la altura */
+    width: 800px;
+    height: 590px;
     padding: 20px;
-    background-image: url(../images/mantenimiento.jpg);
-    background-size: cover; /* Asegura que la imagen de fondo se ajuste al tamaño */
-    border-radius: 20px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: #000000;
     text-align: center;
-    margin: 0 auto; /* Centra el contenido horizontalmente */
-    overflow: hidden; /* Evita que el contenido se desborde */
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 1; /* Asegura que el contenido esté por encima del pseudo-elemento */
 }
+
+.contenido-principal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/cliente1.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Nivel de desenfoque */
+    z-index: -1; /* Mantén el fondo detrás del contenido */
+    opacity: 0.9; /* Si deseas que sea un poco transparente */
+    border-radius: 20px; /* Mantén los bordes redondeados del contenedor */
+}
+
 
 .tabla-tickets {
     margin-top: 20px;
@@ -58,4 +77,104 @@ body {
     color: #ffffff;
     font-weight: bold;
     border: #000000;
+}
+
+.header-titulo {
+    background-color: #000000; /* Fondo gris */
+    color: white; /* Letras blancas */
+    text-align: center; /* Centrar el texto */
+    padding: 0px 0; /* Espaciado vertical */
+    font-weight: bold; /* Texto en negrita */
+}
+
+        .form-container {
+            max-width: 750px;
+            height: 550px;
+            top: 0;
+            margin: 0 auto;
+            padding: 15px;
+            background-color: rgba(92, 90, 90, 0.2); 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(8px); 
+        }
+
+        .form-container label {
+            color: #000000;       
+            font-weight: bold;   
+            font-size: 15px;     
+        }
+
+        .form-header {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #000000;
+          
+        }
+        h2{
+        color: #000000;
+        font-weight: bold;
+    }
+
+     .barra-lateral {
+        width: 48px; 
+        background: #000000;
+        color: white;
+        padding: 15px;
+        transition: width 0.3s;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .barra-lateral h3 {
+        display: none; 
+    }
+
+    .barra-lateral ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .barra-lateral ul li {
+        margin: 10px 0;
+    }
+
+    .barra-lateral ul li a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .barra-lateral ul li a i {
+        margin-right: 15px; 
+    }
+
+    .barra-lateral:hover {
+        width: 250px;
+    }
+
+    .barra-lateral:hover h3 {
+        display: block;
+    }
+
+    .barra-lateral:hover ul li a span {
+        display: inline;
+    }
+
+    .barra-lateral ul li a span {
+        display: none;
+    }
+
+    .header-titulo {
+    background-color: #000000; 
+    color: white; 
+    text-align: center; 
+    padding:0px 0; 
+    font-weight: bold; 
+    margin-bottom: 0; 
+    }
+
+.header-titulo h2 {
+    color: #ffffff;
 }

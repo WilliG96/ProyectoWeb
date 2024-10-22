@@ -1,17 +1,18 @@
 body {
-    background-color: #f8f9fa; /* Fondo claro */
+    background-color: #a9adb1; 
 }
 .contenedor {
     display: flex;
-    margin: 20px; /* Margen alrededor del contenedor */
+    margin: 20px; 
 }
 .barra-lateral {
-    background-color: #000000; /* Color oscuro */
+    background-color: #000000; 
     color: white;
     padding: 20px;
     width: 250px;
-    border-radius: 20px; /* Bordes redondeados */
-    margin-right: 20px; /* Espacio entre la barra y el contenido */
+    height: 590px;
+    border-radius: 20px; 
+    margin-right: 20px; 
 }
 .barra-lateral h2 {
     color: #ffffff;
@@ -33,17 +34,17 @@ body {
 }
 .contenido-principal {
     flex: 1;
-    width: 800px; /* Fija el ancho */
-    height: 600px; /* Fija la altura */
+    width: 800px; 
+    height: 590px; 
     padding: 20px;
     background-image: url(../images/mecanica.jpg);
-    background-size: cover; /* Asegura que la imagen de fondo se ajuste al tamaño */
-    border-radius: 20px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    background-size: cover;
+    border-radius: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
     color: #000000;
     text-align: center;
-    margin: 0 auto; /* Centra el contenido horizontalmente */
-    overflow: hidden; /* Evita que el contenido se desborde */
+    margin: 0 auto; 
+    overflow: hidden; 
 }
 
 .tabla-tickets {
@@ -54,9 +55,178 @@ body {
 }
 
 .btn-success{
-    background-color: #000000; /* Color oscuro */
+    background-color: #000000; 
     color: #ffffff;
     font-weight: bold;
     border: #000000;
 }
+
+.table-responsive {
+    max-height: 500px; 
+    overflow-y: auto; 
+    position: relative; 
+}
+
+.table-responsive table {
+    background-color: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(10px); 
+    border-radius: 5px; 
+    width: 100%;
+}
+
+.table-responsive th {
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white; 
+    padding: 10px;
+}
+
+.table-responsive td {
+    padding: 10px;
+    color: black; 
+}
+
+.dataTables_filter label {
+color: white; 
+font-weight: bold;
+}
+
+.dataTables_paginate .paginate_button {
+    color: white;          
+    font-weight: bold;     
+}
+
+.dataTables_paginate .paginate_button:hover {
+    color: #f0f0f0;      
+}
+
+.dataTables_paginate .paginate_button.current {
+    color: #ffffff;           
+    background-color: #007bff; 
+    border: none;          
+}
+h2{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+   color: white !important;     
+   font-weight: bold !important;
+   background-color: transparent; 
+   border: none;                 
+}
+
+ .barra-lateral {
+    width: 48px; 
+    background: #000000;
+    color: white;
+    padding: 15px;
+    transition: width 0.3s;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.barra-lateral h3 {
+    display: none;
+}
+
+.barra-lateral ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.barra-lateral ul li {
+    margin: 10px 0;
+}
+
+.barra-lateral ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.barra-lateral ul li a i {
+    margin-right: 15px; 
+}
+
+.barra-lateral:hover {
+    width: 250px;
+}
+
+.barra-lateral:hover h3 {
+    display: block;
+}
+
+.barra-lateral:hover ul li a span {
+    display: inline;
+}
+
+.barra-lateral ul li a span {
+    display: none;
+}
+
+.header-titulo {
+background-color: #000000; 
+color: white; 
+text-align: center; 
+padding:0px 0; 
+font-weight: bold; 
+margin-bottom: 0; 
+}
+
+.header-titulo h2 {
+    color: #ffffff;
+}
+
+#resultados {
+margin-top: 20px; 
+background-color: rgba(255, 255, 255, 0.9); 
+padding: 10px; 
+border-radius: 5px; 
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+.search-form {
+margin-bottom: 20px; 
+}
+
+.input-group {
+max-width: 500px; 
+}
+
+.form-control {
+width: 450px; 
+}
+
+.input-group-append a {
+font-weight: bold; 
+color: white; 
+margin-left: 10px; 
+text-decoration: none; 
+}
+
+.input-group-append a:hover {
+text-decoration: underline; 
+}
+
+#btnBuscar {
+background-color: #808080; 
+color: white; 
+font-weight: bold; 
+border: none; 
+}
+
+#btnBuscar:hover {
+background-color: #696969; 
+color: white; 
+}
+.volver-enlace {
+display: block; 
+font-weight: bold; 
+color: white; 
+font-size: 20px;
+text-align: left; 
+}
+
 

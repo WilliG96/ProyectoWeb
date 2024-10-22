@@ -1,0 +1,122 @@
+CRITICAL - 2024-10-21 20:53:38 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: Cliente]
+in APPPATH\Controllers\Seguimiento.php on line 16.
+ 1 APPPATH\Controllers\Seguimiento.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\Seguimiento.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Seguimiento->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Seguimiento))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 23:32:21 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: guardar-ticket]
+in APPPATH\Controllers\TicketCrud.php on line 165.
+ 1 APPPATH\Controllers\TicketCrud.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\TicketCrud.php', 165)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TicketCrud->guardarTicket()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-21 23:37:13 --> mysqli_sql_exception: Unknown column 'tc.dpi' in 'where clause' in C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ProyectoWC\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, ...', 0)
+#1 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, ...')
+#2 C:\xampp\htdocs\ProyectoWC\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, ...')
+#3 C:\xampp\htdocs\ProyectoWC\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, ...', Array, false)
+#4 C:\xampp\htdocs\ProyectoWC\app\Controllers\Seguimiento.php(117): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ProyectoWC\app\Controllers\Seguimiento.php(129): App\Controllers\Seguimiento->verTicketsId2('4896324')
+#6 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(933): App\Controllers\Seguimiento->buscarTicketPorId2()
+#7 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Seguimiento))
+#8 C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ProyectoWC\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ProyectoWC\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ProyectoWC\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-10-21 23:37:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tc.dpi' in 'where clause'
+[Method: POST, Route: TicketHistorial]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tv`.`Marca` AS `marca`, `tv`.`Linea` AS `linea`, `tc`.`Nombre_Cliente` AS `nombre`, `tc`.`Apellido_Cliente` AS `apellido`, `tc`.`Direccion_Cliente` AS `direccion`, `tc`.`Telefono_Cliente` AS `telefono`, `tu`.`usuario_asignado` AS `usuario`, `tl`.`Nombre_Servicio` AS `servicio`, `tc`.`Id_Cliente` as `cliente`, `tc`.`DPI_CUI` as `dpi`
+FROM `tickets_servicio` `ts`
+INNER JOIN `tbl_vehiculo` `tv` ON `ts`.`Id_Vehiculo` = `tv`.`Id_Vehiculo`
+INNER JOIN `tbl_clientes` `tc` ON `ts`.`Id_Cliente` = `tc`.`Id_Cliente`
+INNER JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`
+INNER JOIN `tbl_servicios` `tl` ON `ts`.`Id_Servicio` = `tl`.`Id_Servicio`
+WHERE `tc`.`dpi` = :tc.dpi:', [...], false)
+ 2 APPPATH\Controllers\Seguimiento.php(117): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Seguimiento.php(129): App\Controllers\Seguimiento->verTicketsId2('4896324')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Seguimiento->buscarTicketPorId2()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Seguimiento))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 23:37:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tc.dpi' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tv`.`Marca` AS `marca`, `tv`.`Linea` AS `linea`, `tc`.`Nombre_Cliente` AS `nombre`, `tc`.`Apellido_Cliente` AS `apellido`, `tc`.`Direccion_Cliente` AS `direccion`, `tc`.`Telefono_Cliente` AS `telefono`, `tu`.`usuario_asignado` AS `usuario`, `tl`.`Nombre_Servicio` AS `servicio`, `tc`.`Id_Cliente` as `cliente`, `tc`.`DPI_CUI` as `dpi`
+FROM `tickets_servicio` `ts`
+INNER JOIN `tbl_vehiculo` `tv` ON `ts`.`Id_Vehiculo` = `tv`.`Id_Vehiculo`
+INNER JOIN `tbl_clientes` `tc` ON `ts`.`Id_Cliente` = `tc`.`Id_Cliente`
+INNER JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`
+INNER JOIN `tbl_servicios` `tl` ON `ts`.`Id_Servicio` = `tl`.`Id_Servicio`
+WHERE `tc`.`dpi` = \'4896324\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tv`.`Marca` AS `marca`, `tv`.`Linea` AS `linea`, `tc`.`Nombre_Cliente` AS `nombre`, `tc`.`Apellido_Cliente` AS `apellido`, `tc`.`Direccion_Cliente` AS `direccion`, `tc`.`Telefono_Cliente` AS `telefono`, `tu`.`usuario_asignado` AS `usuario`, `tl`.`Nombre_Servicio` AS `servicio`, `tc`.`Id_Cliente` as `cliente`, `tc`.`DPI_CUI` as `dpi`
+FROM `tickets_servicio` `ts`
+INNER JOIN `tbl_vehiculo` `tv` ON `ts`.`Id_Vehiculo` = `tv`.`Id_Vehiculo`
+INNER JOIN `tbl_clientes` `tc` ON `ts`.`Id_Cliente` = `tc`.`Id_Cliente`
+INNER JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`
+INNER JOIN `tbl_servicios` `tl` ON `ts`.`Id_Servicio` = `tl`.`Id_Servicio`
+WHERE `tc`.`dpi` = \'4896324\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tv`.`Marca` AS `marca`, `tv`.`Linea` AS `linea`, `tc`.`Nombre_Cliente` AS `nombre`, `tc`.`Apellido_Cliente` AS `apellido`, `tc`.`Direccion_Cliente` AS `direccion`, `tc`.`Telefono_Cliente` AS `telefono`, `tu`.`usuario_asignado` AS `usuario`, `tl`.`Nombre_Servicio` AS `servicio`, `tc`.`Id_Cliente` as `cliente`, `tc`.`DPI_CUI` as `dpi`
+FROM `tickets_servicio` `ts`
+INNER JOIN `tbl_vehiculo` `tv` ON `ts`.`Id_Vehiculo` = `tv`.`Id_Vehiculo`
+INNER JOIN `tbl_clientes` `tc` ON `ts`.`Id_Cliente` = `tc`.`Id_Cliente`
+INNER JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`
+INNER JOIN `tbl_servicios` `tl` ON `ts`.`Id_Servicio` = `tl`.`Id_Servicio`
+WHERE `tc`.`dpi` = :tc.dpi:', [...], false)
+ 4 APPPATH\Controllers\Seguimiento.php(117): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Seguimiento.php(129): App\Controllers\Seguimiento->verTicketsId2('4896324')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Seguimiento->buscarTicketPorId2()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Seguimiento))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 23:37:13 --> [Caused by] mysqli_sql_exception: Unknown column 'tc.dpi' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ts`.*, `tv`.`Marca` AS `marca`, `tv`.`Linea` AS `linea`, `tc`.`Nombre_Cliente` AS `nombre`, `tc`.`Apellido_Cliente` AS `apellido`, `tc`.`Direccion_Cliente` AS `direccion`, `tc`.`Telefono_Cliente` AS `telefono`, `tu`.`usuario_asignado` AS `usuario`, `tl`.`Nombre_Servicio` AS `servicio`, `tc`.`Id_Cliente` as `cliente`, `tc`.`DPI_CUI` as `dpi`
+FROM `tickets_servicio` `ts`
+INNER JOIN `tbl_vehiculo` `tv` ON `ts`.`Id_Vehiculo` = `tv`.`Id_Vehiculo`
+INNER JOIN `tbl_clientes` `tc` ON `ts`.`Id_Cliente` = `tc`.`Id_Cliente`
+INNER JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`
+INNER JOIN `tbl_servicios` `tl` ON `ts`.`Id_Servicio` = `tl`.`Id_Servicio`
+WHERE `tc`.`dpi` = \'4896324\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ts`.*, `tv`.`Marca` AS `marca`, `tv`.`Linea` AS `linea`, `tc`.`Nombre_Cliente` AS `nombre`, `tc`.`Apellido_Cliente` AS `apellido`, `tc`.`Direccion_Cliente` AS `direccion`, `tc`.`Telefono_Cliente` AS `telefono`, `tu`.`usuario_asignado` AS `usuario`, `tl`.`Nombre_Servicio` AS `servicio`, `tc`.`Id_Cliente` as `cliente`, `tc`.`DPI_CUI` as `dpi`
+FROM `tickets_servicio` `ts`
+INNER JOIN `tbl_vehiculo` `tv` ON `ts`.`Id_Vehiculo` = `tv`.`Id_Vehiculo`
+INNER JOIN `tbl_clientes` `tc` ON `ts`.`Id_Cliente` = `tc`.`Id_Cliente`
+INNER JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`
+INNER JOIN `tbl_servicios` `tl` ON `ts`.`Id_Servicio` = `tl`.`Id_Servicio`
+WHERE `tc`.`dpi` = \'4896324\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ts`.*, `tv`.`Marca` AS `marca`, `tv`.`Linea` AS `linea`, `tc`.`Nombre_Cliente` AS `nombre`, `tc`.`Apellido_Cliente` AS `apellido`, `tc`.`Direccion_Cliente` AS `direccion`, `tc`.`Telefono_Cliente` AS `telefono`, `tu`.`usuario_asignado` AS `usuario`, `tl`.`Nombre_Servicio` AS `servicio`, `tc`.`Id_Cliente` as `cliente`, `tc`.`DPI_CUI` as `dpi`
+FROM `tickets_servicio` `ts`
+INNER JOIN `tbl_vehiculo` `tv` ON `ts`.`Id_Vehiculo` = `tv`.`Id_Vehiculo`
+INNER JOIN `tbl_clientes` `tc` ON `ts`.`Id_Cliente` = `tc`.`Id_Cliente`
+INNER JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`
+INNER JOIN `tbl_servicios` `tl` ON `ts`.`Id_Servicio` = `tl`.`Id_Servicio`
+WHERE `tc`.`dpi` = \'4896324\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ts`.*, `tv`.`Marca` AS `marca`, `tv`.`Linea` AS `linea`, `tc`.`Nombre_Cliente` AS `nombre`, `tc`.`Apellido_Cliente` AS `apellido`, `tc`.`Direccion_Cliente` AS `direccion`, `tc`.`Telefono_Cliente` AS `telefono`, `tu`.`usuario_asignado` AS `usuario`, `tl`.`Nombre_Servicio` AS `servicio`, `tc`.`Id_Cliente` as `cliente`, `tc`.`DPI_CUI` as `dpi`
+FROM `tickets_servicio` `ts`
+INNER JOIN `tbl_vehiculo` `tv` ON `ts`.`Id_Vehiculo` = `tv`.`Id_Vehiculo`
+INNER JOIN `tbl_clientes` `tc` ON `ts`.`Id_Cliente` = `tc`.`Id_Cliente`
+INNER JOIN `tbl_usuarios` `tu` ON `ts`.`Id_Usuario` = `tu`.`Id_Usuario`
+INNER JOIN `tbl_servicios` `tl` ON `ts`.`Id_Servicio` = `tl`.`Id_Servicio`
+WHERE `tc`.`dpi` = :tc.dpi:', [...], false)
+ 5 APPPATH\Controllers\Seguimiento.php(117): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Seguimiento.php(129): App\Controllers\Seguimiento->verTicketsId2('4896324')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Seguimiento->buscarTicketPorId2()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Seguimiento))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

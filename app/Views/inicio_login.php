@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <title>Truck Workshop W&C</title>
     <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Incluir Bootstrap CSS -->
+    <style>
+        /* Estilo para el mensaje de error */
+        .mensaje-error {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            padding: 10px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
 
@@ -28,21 +46,22 @@
             <button type="submit">Iniciar</button>
         </form>
 
-        <!-- Mensaje de error solo si "error" está en la URL -->
-        <div class="mensaje-error" id="mensaje-error" style="display: none;">
-            Usuario o contraseña incorrectos.
-        </div>
+        <!-- Mensaje de error flotante -->
+        <?php if (session()->getFlashdata('error')): ?>
+            <div class="mensaje-error" id="mensaje-error">
+                <?= session()->getFlashdata('error'); ?>
+            </div>
+        <?php endif; ?>
     </section>
 
     <script>
-        // Mostrar el mensaje de error si la URL tiene "?error=1"
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('error') === '1') {
-            document.getElementById('mensaje-error').style.display = 'block';
+        // Mostrar el mensaje de error si existe
+        const mensajeError = document.getElementById('mensaje-error');
+        if (mensajeError) {
+            mensajeError.style.display = 'block';
 
-            // Ocultar el mensaje de error después de 3 segundos
             setTimeout(() => {
-                document.getElementById('mensaje-error').style.display = 'none';
+                mensajeError.style.display = 'none';
             }, 3000);
         }
 
@@ -51,21 +70,33 @@
             const usuarioInput = document.getElementById('usuario');
             const recordarCheckbox = document.getElementById('recordarme');
 
-            // Al cargar la página, verificar si el usuario está almacenado en LocalStorage
             if (localStorage.getItem('usuario')) {
                 usuarioInput.value = localStorage.getItem('usuario');
-                recordarCheckbox.checked = true; // Mantiene el checkbox seleccionado
+                recordarCheckbox.checked = true; 
             }
 
-            // Guardar el usuario en LocalStorage si se activa la opción de "Recordarme"
             document.querySelector('form').addEventListener('submit', function() {
                 if (recordarCheckbox.checked) {
                     localStorage.setItem('usuario', usuarioInput.value);
                 } else {
-                    localStorage.removeItem('usuario'); // Elimina el usuario si no está marcada la opción
+                    localStorage.removeItem('usuario'); 
                 }
             });
         });
+
+        window.onload = function() {
+            if (window.history.length > 1) {
+                window.history.pushState(null, null, window.location.href);
+                window.onpopstate = function () {
+                    window.history.pushState(null, null, window.location.href);
+                };
+            }
+        };
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+

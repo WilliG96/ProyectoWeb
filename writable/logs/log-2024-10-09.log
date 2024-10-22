@@ -1,0 +1,97 @@
+CRITICAL - 2024-10-09 00:28:56 --> Error: Class "App\Controllers\ServiciosModel" not found
+[Method: POST, Route: guardar-servicio]
+in APPPATH\Controllers\VehiculosCrud.php on line 116.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->guardarServicio()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-09 00:29:51 --> Error: Class "App\Controllers\ServiciosModel" not found
+[Method: POST, Route: guardar-servicio]
+in APPPATH\Controllers\VehiculosCrud.php on line 116.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->guardarServicio()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-09 00:56:49 --> ErrorException: Undefined property: App\Controllers\VehiculosCrud::$input
+[Method: POST, Route: verPorId]
+in APPPATH\Controllers\VehiculosCrud.php on line 85.
+ 1 APPPATH\Controllers\VehiculosCrud.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\VehiculosCrud::$input', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicioId()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-09 01:02:26 --> ErrorException: Undefined variable $id
+[Method: POST, Route: verPorId]
+in APPPATH\Controllers\VehiculosCrud.php on line 96.
+ 1 APPPATH\Controllers\VehiculosCrud.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 96)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicioId()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-09 01:04:17 --> ArgumentCountError: Too few arguments to function App\Controllers\VehiculosCrud::verServicioId(), 0 passed in C:\xampp\htdocs\ProyectoWC\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: verPorId]
+in APPPATH\Controllers\VehiculosCrud.php on line 84.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->verServicioId()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-09 01:40:13 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: guardar-servicio]
+in APPPATH\Controllers\VehiculosCrud.php on line 148.
+ 1 APPPATH\Controllers\VehiculosCrud.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\VehiculosCrud.php', 148)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VehiculosCrud->guardarServicio()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VehiculosCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-09 04:55:08 --> ErrorException: Undefined property: stdClass::$estado
+[Method: POST, Route: login-chek]
+in APPPATH\Controllers\TallerCrud.php on line 49.
+ 1 APPPATH\Controllers\TallerCrud.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$estado', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\TallerCrud.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TallerCrud->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TallerCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-09 04:59:10 --> ErrorException: Undefined property: stdClass::$estado
+[Method: POST, Route: login-chek]
+in APPPATH\Controllers\TallerCrud.php on line 49.
+ 1 APPPATH\Controllers\TallerCrud.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$estado', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\TallerCrud.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TallerCrud->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TallerCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-09 05:05:10 --> ErrorException: Undefined property: stdClass::$estado
+[Method: POST, Route: login-chek]
+in APPPATH\Controllers\TallerCrud.php on line 49.
+ 1 APPPATH\Controllers\TallerCrud.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$estado', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\TallerCrud.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TallerCrud->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TallerCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-09 05:05:18 --> ErrorException: Undefined property: stdClass::$estado
+[Method: POST, Route: login-chek]
+in APPPATH\Controllers\TallerCrud.php on line 49.
+ 1 APPPATH\Controllers\TallerCrud.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$estado', 'C:\\xampp\\htdocs\\ProyectoWC\\app\\Controllers\\TallerCrud.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TallerCrud->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TallerCrud))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

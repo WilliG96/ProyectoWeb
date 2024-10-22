@@ -7,87 +7,29 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url('css/vehiculo.css'); ?>">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
-    <style>
-    .table-responsive {
-        max-height: 500px; 
-        overflow-y: auto; 
-        position: relative; 
-    }
-
-    .table-responsive table {
-        background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
-        backdrop-filter: blur(10px); /* Desenfoque en el fondo */
-        border-radius: 5px; /* Bordes redondeados */
-        width: 100%;
-    }
-
-    .table-responsive th {
-        background-color: rgba(0, 0, 0, 0.7); 
-        color: white; 
-        padding: 10px;
-    }
-
-    .table-responsive td {
-        padding: 10px;
-        color: black; 
-    }
-
-    .dataTables_filter label {
-    color: white; 
-    font-weight: bold;
-    }
-
-    .dataTables_paginate .paginate_button {
-        color: white;          
-        font-weight: bold;     
-    }
-
-    .dataTables_paginate .paginate_button:hover {
-        color: #f0f0f0;      
-    }
-
-    .dataTables_paginate .paginate_button.current {
-        color: #ffffff;           
-        background-color: #007bff; 
-        border: none;          
-    }
-    h1{
-        color: #ffffff;
-        font-weight: bold;
-    }
-
-    .dataTables_wrapper .dataTables_paginate .paginate_button {
-       color: white !important;     /* Siempre blanco */
-       font-weight: bold !important; /* Siempre en negrita */
-       background-color: transparent; /* Fondo transparente */
-       border: none;                 /* Sin bordes */
-    }
-
-    .modal-content {
-    border-radius: 20px; /* Ajusta el valor según lo redondeado que desees */
-    }
-
-    .btn {
-    margin-right: 10px; /* Ajusta el valor según la separación deseada */
-}
-
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Título Taller W&C -->
+    <div class="header-titulo">
+        <h2>Taller W&C</h2>
+    </div>
+
     <div class="contenedor">
         <!-- Barra lateral -->
         <nav class="barra-lateral">
             <h3>Taller Mecánico</h3>
             <ul>
-                <li><a href="<?= base_url('inicio-taller'); ?>">Inicio</a></li>
-                <li><a href="#">Tickets Activos</a></li>
-                <li><a href="<?= base_url('crear-ticket'); ?>">Crear Nuevo Ticket</a></li>
-                <li><a href="<?= base_url('ver-Cliente') ?>">Clientes</a></li>
-                <li><a href="<?= base_url('registrar-cliente') ?>">Crear Nuevo Cliente</a></li>
-                <li><a href="<?= base_url('registro-vehiculo') ?>">Registrar Vehículo</a></li>
-                <li><a href="<?= base_url('servicios') ?>">Servicios</a></li>
-                <li><a href="#">Configuraciones</a></li>
-            </ul>
+                <li><a href="<?= base_url('inicio-taller'); ?>"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="<?= base_url('crear-ticket'); ?>"><i class="fas fa-plus-circle"></i> Crear Nuevo Ticket</a></li>
+                <li><a href="<?= base_url('ver-Cliente') ?>"><i class="fas fa-users"></i> Clientes</a></li>
+                <li><a href="<?= base_url('registrar-cliente') ?>"><i class="fas fa-user-plus"></i> Crear Nuevo Cliente</a></li>
+                <li><a href="<?= base_url('registro-vehiculo') ?>"><i class="fas fa-car"></i> Registrar Vehículo</a></li>
+                <li><a href="<?= base_url('servicios') ?>"><i class="fas fa-cogs"></i> Servicios</a></li>
+                <li><a href="<?= base_url('configuraciones') ?>"><i class="fas fa-cog"></i> Configuraciones</a></li>
+                <li><a href="<?= base_url('salir'); ?>"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+          </ul>
         </nav>
 
         <!-- Contenido principal -->
@@ -178,7 +120,8 @@
                             <th>Marca</th>
                             <th>Línea</th>
                             <th>Tipo de Vehículo</th>
-                            <th>Acciones</th>
+                            <th>Estado</th>
+                            <th>Accion</th>
                         </tr>
                     </thead>
 
@@ -190,10 +133,14 @@
                                     <td><?= htmlspecialchars($vehiculo['Marca']); ?></td>
                                     <td><?= htmlspecialchars($vehiculo['Linea']); ?></td>
                                     <td><?= htmlspecialchars($vehiculo['tipo_vehiculo_nombre']); ?></td>
-                                    <td class="action-buttons">
-                                        <a href="<?= base_url('TallerCrud/editarVehiculo/'.$vehiculo['Id_Vehiculo']); ?>" class='btn btn-primary btn-sm'>Editar</a>
-                                        <a href="<?= base_url('TallerCrud/eliminarVehiculo/'.$vehiculo['Id_Vehiculo']); ?>" class='btn btn-danger btn-sm' onclick='return confirm("¿Estás seguro de que quieres eliminar este vehículo?");'>Eliminar</a>
-                                    </td>
+                                    <td><?= $vehiculo['Estado'] == 1 ? 'Activo' : 'Inactivo'; ?></td>
+                                        <td class="action-buttons">
+                                            <?php if ($vehiculo['Estado'] == 1): ?>
+                                                <a href="<?= base_url('inhabilitar/' . $vehiculo['Id_Vehiculo']); ?>" class='btn btn-danger btn-sm' onclick='return confirm("¿Seguro que quieres inhabilitar el vehiculo?");'>Inhabilitar</a>
+                                            <?php else: ?>
+                                                <a href="<?= base_url('activar/' . $vehiculo['Id_Vehiculo']); ?>" class='btn btn-success btn-sm' onclick='return confirm("¿Quieres activar el vehiculo?");'>Activar</a>
+                                            <?php endif; ?>
+                                        </td>
                                 </tr>
                             <?php endforeach; ?>
                         <?php else: ?>
@@ -216,19 +163,18 @@
     <script>
         $(document).ready(function() {
             $('#vehiculos-list').DataTable({
-                "language": {
-            "search": "Buscar:",          // Cambia "Search" a "Buscar"
+                "language": {      
             "paginate": {
-                "next": "Siguiente",       // Cambia "Next" a "Siguiente"
-                "previous": "Atrás"        // Cambia "Previous" a "Atrás"
+                "next": "Siguiente",   
+                "previous": "Atrás"    
             }
           },
-                "pageLength": 7,        // Mostrar 8 filas por página
-                "lengthChange": false,  // Desactivar la opción de cambiar el número de filas
-                "ordering": false,               // Desactiva el ordenamiento
-                "searching": true,      // Mantener la opción de búsqueda
-                "paging": true,         // Habilitar la paginación
-                "info": false           // Ocultar la información del estado de la tabla
+                "pageLength": 6,       
+                "lengthChange": false,  
+                "ordering": false,          
+                "searching": false,   
+                "paging": true,        
+                "info": false  
 
             });
         });

@@ -30,156 +30,203 @@ class TallerCrud extends Controller
 
     public function login()
     {
-        // Acceder a la solicitud
         $request = \Config\Services::request();
         
-        // Obtener usuario y contraseña del formulario
         $usuario = $request->getPost('usuario');
         $contraseña = $request->getPost('contraseña');
     
         // Cargar el modelo
         $model = new TallerModel();
     
-        // Verificar el usuario y contraseña
-        $usuarioEncontrado = $model->verificarUsuario($usuario, $contraseña);
+        // Verificar el usuario
+        $usuarioEncontrado = $model->verificarUsuario($usuario);
     
-        // Verificar si el usuario existe
+     
         if ($usuarioEncontrado) {
-            // Establecer los datos del usuario en la sesión
-            session()->set('usuario', [
-                'id_usuario' => $usuarioEncontrado->Id_Usuario,  // Aquí almacenamos el ID del usuario
-                'username' => $usuarioEncontrado->Usuario_Asignado,  // O cualquier otro campo que quieras usar
-                // Puedes añadir más campos si lo deseas
-            ]);
+       
+            if ($usuarioEncontrado->Estado == 0) {
+        
+                session()->setFlashdata('error', 'Su usuario está inactivo.');
+                return redirect()->to('/login-user');
+            }
     
-            // Redirigir a la página de inicio
-            return redirect()->to('/inicio-taller');  // Cambia esto a la ruta correcta para tu vista de inicio
-        } else {
-            // Redirigir con un mensaje de error
-            return redirect()->to('/login-user')->with('error', 'Usuario o contraseña incorrectos.');
-        }
+         
+            if (password_verify($contraseña, $usuarioEncontrado->Contraseña_Asignada)) {
+         
+                session()->set('usuario', [
+                    'id_usuario' => $usuarioEncontrado->Id_Usuario, 
+                    'username' => $usuarioEncontrado->Usuario_Asignado,  
+                ]);
+    
+                return redirect()->to('/inicio-taller');  
+            } else {
+
+                return redirect()->to('/login-user')->with('error', 'Usuario o contraseña incorrectos.');
+            }
+        } 
     }
     
-
+    
     public function logout()
     {
         // Destruir la sesión
         session()->destroy();
-        return redirect()->to(base_url('TallerCrud/login'));
-    }
+    
 
+        return redirect()->to(base_url('/'))->with('headers', [
+            'Cache-Control' => 'no-store, no-cache, must-revalidate, max-age=0',
+            'Pragma' => 'no-cache',
+            'Expires' => 'Fri, 01 Jan 1990 00:00:00 GMT'
+        ]);
+    }
+    
     public function inicio()
     {
         return view('inicio'); // vista del inicio
     }
 
-    // Función para mostrar la vista con la lista de vehículos y tipos
-    public function vehiculos()
-    {
-        // Obtener datos de vehículos con tipos
-        $data['vehiculos'] = $this->VehiculosModel->obtenerVehiculosConTipos();
-        
-        // Obtener tipos de vehículos para el formulario de agregar vehículo
-        $data['tipos'] = $this->TipoVehiculosModel->obtenerTiposVehiculos();
-      
-        // Cargar la vista, pasando los datos
-        return view('registrar_vehiculo', $data);
-    }
-
-    // Función para agregar un nuevo tipo de vehículo
-    public function agregarTipoVehiculo()
-    {
-        $nombreTipo = $this->request->getPost('nombre_tipo');
-        
-        // Asegúrate de que el campo sea el correcto en la base de datos
-        $this->TipoVehiculosModel->agregarTipoVehiculo(['Nombre_Tipo_Vehiculo' => $nombreTipo]);
-
-        // Redirigir a la página de vehículos después de agregar
-        return redirect()->to('/TallerCrud/vehiculos');
-    }
-
-    // Función para agregar un nuevo vehículo
-    public function agregarVehiculo()
-    {
-        $data = [
-            'Marca' => $this->request->getPost('marca'), // Asegúrate de que el nombre del campo coincida
-            'Linea' => $this->request->getPost('linea'),
-            'Id_Tipo_Vehiculo' => $this->request->getPost('tipo_vehiculo'), // Cambié el nombre del campo para que coincida con la base de datos
-        ];
-
-        $this->VehiculosModel->agregarVehiculo($data);
-
-        // Redirigir a la página de vehículos después de agregar
-        return redirect()->to('/TallerCrud/vehiculos');
-    }
-
-
-    // Función para mostrar la lista de vehículos
-public function indexVehiculos()
+public function irConfiguracion()
 {
-    $VehiculosModel = new VehiculosModel();
-    $data['vehiculos'] = $VehiculosModel->orderBy('id', 'DESC')->findAll();
-    return view('registrar_vehiculo', $data);
+    $db = \Config\Database::connect();
+
+    $TallerModel = new TallerModel();
+    $data['usuarios'] = $TallerModel->findAll();
+    return view('configuracion', $data); 
+}
+
+public function guardarAdmin()
+{
+
+    $validation = \Config\Services::validation();
+
+    $validation->setRules([
+        'nombre_usuario' => 'required',
+        'apellido_usuario' => 'required',
+        'direccion_usuario' => 'required',
+        'correo_usuario' => 'required|valid_email', 
+        'usuario_asignado' => 'required',
+        'contraseña_asignada' => 'required',
+        'telefono_usuario' => 'required' 
+    ], 
+    [
+
+        'correo_usuario' => [
+            'valid_email' => 'El correo electrónico debe ser válido.'
+        ]
+    ]);
+
+
+    if (!$this->validate($validation->getRules())) {
+    
+        return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+    }
+
+    $TallerModel = new TallerModel();
+    $data = [
+        'Nombre_Usuario' => $this->request->getPost('nombre_usuario'), 
+        'Apellido_Usuario' => $this->request->getPost('apellido_usuario'),
+        'Direccion_Usuario' => $this->request->getPost('direccion_usuario'), 
+        'Correo_Usuario' => $this->request->getPost('correo_usuario'),
+        'Usuario_Asignado' => $this->request->getPost('usuario_asignado'),
+        'Contraseña_Asignada' => password_hash($this->request->getPost('contraseña_asignada'), PASSWORD_DEFAULT), // Hashear la contraseña
+        'Telefono' => $this->request->getPost('telefono_usuario'),
+    ];
+
+    // Guardar los datos en la base de datos
+    try {
+        $TallerModel->insert($data);
+        return $this->response->redirect(site_url('configuraciones'));
+    } catch (\Exception $e) {
+        return redirect()->back()->with('error', 'Error al guardar el usuario: ' . $e->getMessage());
+    }
 }
 
 
+public function inhabilitar($idUsuario)
+{
+    // Cargar el modelo correspondiente
+    $TallerModel = new TallerModel();
 
-
-
-
-
-
-
-
-    // Muestra el formulario de crear cliente
-    public function create(){
-        return view('add_cliente'); // Cambia la vista a 'add_cliente'
+    // Verificar si el usuario existe
+    $usuario = $TallerModel->find($idUsuario);
+    if (!$usuario) {
+        return redirect()->back()->with('error', 'Usuario no encontrado.');
     }
- 
-    // Insertar datos del cliente
-    public function store() {
-        $clienteModel = new ClienteModel();
-        $data = [
-            'nombre'    => $this->request->getVar('nombre'),
-            'direccion' => $this->request->getVar('direccion'),
-            'telefono'  => $this->request->getVar('telefono'),
-            'email'     => $this->request->getVar('email'),
-            'cui'       => $this->request->getVar('cui')
-        ];
-        $clienteModel->insert($data);
+
+    $data = [
+        'Estado' => 0 
+    ];
+
+    // Actualiza el usuario en la base de datos
+    $TallerModel->update($idUsuario, $data); 
+
+    // Redirigir después de la actualización
+    return redirect()->to(site_url('configuraciones'))->with('success', 'Usuario inhabilitado con éxito.');
+}
+
+public function activar($idUsuario)
+{
+    // Cargar el modelo correspondiente
+    $TallerModel = new TallerModel();
+
+    // Verificar si el usuario existe
+    $usuario = $TallerModel->find($idUsuario);
+    if (!$usuario) {
+        return redirect()->back()->with('error', 'Usuario no encontrado.');
+    }
+
+    $data = [
+        'Estado' => 1 
+    ];
+
+    // Actualiza el usuario en la base de datos
+    $TallerModel->update($idUsuario, $data); 
+
+    // Redirigir después de la actualización
+    return redirect()->to(site_url('configuraciones'))->with('success', 'Usuario inhabilitado con éxito.');
+}
+
+// Muestra los datos de un solo cliente para editar
+public function singleUser($id = null) {
+    $TallerModel = new TallerModel();
+    $data['cliente_obj'] = $TallerModel->where('Id_Usuario', $id)->first();
+
+    return view('edit_user', $data); // Cambia la vista a 'edit_cliente'
+}
+
+
+public function actualizarAdmin()
+{
+    // Acceder a la solicitud
+    $request = \Config\Services::request();
+
+    // Obtener datos del formulario
+    $id = $request->getPost('id_usuario'); // Asegúrate de que el nombre del campo sea correcto
+    $data = [
+        'Nombre_Usuario' => $request->getPost('nombre_usuario'),
+        'Apellido_Usuario' => $request->getPost('apellido_usuario'),
+        'Direccion_Usuario' => $request->getPost('direccion_usuario'),
+        'Correo_Usuario' => $request->getPost('correo_usuario'),
+        'Telefono' => $request->getPost('telefono_usuario'),
+        'Usuario_Asignado' => $request->getPost('usuario_asignado'),
+    ];
+
+    // Verificar si se proporcionó una nueva contraseña
+    $nueva_contraseña = $request->getPost('contraseña_asignada');
+    if (!empty($nueva_contraseña)) {
+        $data['Contraseña_Asignada'] = password_hash($nueva_contraseña, PASSWORD_DEFAULT); // Solo actualizar si no está vacío
+    }
+
+    // Cargar el modelo
+    $model = new TallerModel();
+
+    // Actualizar los datos del usuario
+    $model->update($id, $data);
+
+    // Redirigir con mensaje de éxito
+    return redirect()->to('configuraciones')->with('success', 'Usuario actualizado correctamente.');
+}
+
+
     
-        // Establecer un mensaje en la sesión
-        session()->setFlashdata('success', 'Registro guardado con éxito.');
-    
-        return $this->response->redirect(site_url('/clientes-list')); // Ajusta la ruta
-    }
-
-    // Muestra los datos de un solo cliente para editar
-    public function singleCliente($id = null){
-        $clienteModel = new ClienteModel();
-        $data['cliente_obj'] = $clienteModel->where('id', $id)->first();
-        return view('edit_cliente', $data); // Cambia la vista a 'edit_cliente'
-    }
-
-    // Actualiza los datos del cliente
-    public function update(){
-        $clienteModel = new ClienteModel();
-        $id = $this->request->getVar('id');
-        $data = [
-            'nombre'    => $this->request->getVar('nombre'),
-            'direccion' => $this->request->getVar('direccion'),
-            'telefono'  => $this->request->getVar('telefono'),
-            'email'     => $this->request->getVar('email'),
-            'cui'       => $this->request->getVar('cui')
-        ];
-        $clienteModel->update($id, $data);
-        return $this->response->redirect(site_url('/clientes-list')); // Ajusta la ruta
-    }
- 
-   // Elimina el registro de un cliente
-    public function delete($id = null){
-        $clienteModel = new ClienteModel();
-        $clienteModel->where('id', $id)->delete($id);
-        return $this->response->redirect(site_url('/clientes-list')); // Ajusta la ruta
-    }    
 }

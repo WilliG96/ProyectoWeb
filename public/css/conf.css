@@ -1,0 +1,145 @@
+body {
+    background-color: #000000; /* Fondo claro */
+}
+
+.contenedor {
+    display: flex;
+    margin: 20px; /* Margen alrededor del contenedor */
+}
+
+.barra-lateral {
+    width: 48px; /* Barra colapsada mostrando solo los iconos */
+    background-color: #000000; /* Color oscuro */
+    color: white;
+    padding: 15px;
+    height: 600px;
+    border-radius: 20px; /* Bordes redondeados */
+    margin-right: 20px; /* Espacio entre la barra y el contenido */
+    transition: width 0.3s;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.barra-lateral h2, 
+.barra-lateral h3 {
+    color: #ffffff;
+    display: none; /* Ocultar el título en la barra colapsada */
+}
+
+.barra-lateral ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.barra-lateral ul li {
+    margin-bottom: 20px; /* Espacio entre los elementos de la lista */
+}
+
+.barra-lateral ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.barra-lateral ul li a:hover {
+    text-decoration: underline;
+}
+
+.barra-lateral ul li a i {
+    margin-right: 15px; /* Espacio entre el icono y el texto */
+}
+
+/* Expandir la barra lateral cuando se pasa el ratón sobre ella */
+.barra-lateral:hover {
+    width: 250px;
+}
+
+/* Mostrar el título y el texto de los enlaces cuando la barra esté expandida */
+.barra-lateral:hover h3 {
+    display: block;
+}
+
+.barra-lateral:hover ul li a span {
+    display: inline;
+}
+
+/* Ocultar el texto cuando la barra está colapsada */
+.barra-lateral ul li a span {
+    display: none;
+}
+
+.contenido-principal {
+    flex: 1;
+    width: 800px; /* Fija el ancho */
+    height: 590px; /* Fija la altura */
+    padding: 20px;
+    background-image: url(../images/admin.jpg);
+    background-size: cover; /* Asegura que la imagen de fondo se ajuste al tamaño */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    color: #000000;
+    text-align: center;
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.table-responsive {
+    max-height: 500px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.table-responsive table {
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+    backdrop-filter: blur(10px); /* Desenfoque en el fondo */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 100%;
+}
+
+.table-responsive th {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+}
+
+.table-responsive td {
+    padding: 10px;
+    color: black;
+}
+
+.dataTables_filter label,
+.dataTables_paginate .paginate_button {
+    color: white;
+    font-weight: bold;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    color: #f0f0f0;
+}
+
+.dataTables_paginate .paginate_button.current {
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+}
+
+h2 {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    background-color: transparent;
+    border: none;
+}
+
+.header-titulo {
+    background-color: #000000; /* Fondo gris */
+    color: white; /* Letras blancas */
+    text-align: center; /* Centrar el texto */
+    padding: 0px 0; /* Espaciado vertical */
+    font-weight: bold; /* Texto en negrita */
+}
+
